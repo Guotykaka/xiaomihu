@@ -11,115 +11,37 @@
     <title>~~~~~~~</title>
     <link rel="icon" type="image/png" href="https://photo.ishield.cn/pic/5b8e613e9dc6d611829f771e">
     <title>Document</title>
-    <style>
-        body {
-            scroll-snap-type: y mandatory;
-            background-color: #b03;
-            margin: 0;
-        }
-
-        section {
-            height: 100vh;
-            width: 100vw;
-            background: rgba(0, 0, 0, .5);
-            color: #fff;
-            line-height: 100vh;
-            text-align: center;
-            font-size: 20vh;
-            scroll-snap-align: start;
-        }
-
-        .g-word {
-            /* background-image: url($img1); */
-            background: radial-gradient(circle closest-side at 60% 43%, #b03 26%, rgba(187, 0, 51, 0) 27%),
-                radial-gradient(circle closest-side at 40% 43%, #b03 26%, rgba(187, 0, 51, 0) 27%),
-                radial-gradient(circle closest-side at 40% 22%, #d35 45%, rgba(221, 51, 85, 0) 46%),
-                radial-gradient(circle closest-side at 60% 22%, #d35 45%, rgba(221, 51, 85, 0) 46%),
-                radial-gradient(circle closest-side at 50% 35%, #d35 30%, rgba(221, 51, 85, 0) 31%),
-
-                radial-gradient(circle closest-side at 60% 43%, #b03 26%, rgba(187, 0, 51, 0) 27%) 50px 50px,
-                radial-gradient(circle closest-side at 40% 43%, #b03 26%, rgba(187, 0, 51, 0) 27%) 50px 50px,
-                radial-gradient(circle closest-side at 40% 22%, #d35 45%, rgba(221, 51, 85, 0) 46%) 50px 50px,
-                radial-gradient(circle closest-side at 60% 22%, #d35 45%, rgba(221, 51, 85, 0) 46%) 50px 50px,
-                radial-gradient(circle closest-side at 50% 35%, #d35 30%, rgba(221, 51, 85, 0) 31%) 50px 50px;
-            background-color: #b03;
-            background-size: 100px 100px;
-            background-attachment: fixed;
-            /* background-size: cover; */
-            background-position: center center;
-        }
-
-        .g-img {
-            background-image: url(nema.webp);
-            background-attachment: fixed;
-            background-size: cover;
-            background-position: center center;
-        }
-
-        .g-img3 {
-            background-image: url($img3);
-            background-attachment: fixed;
-            background-size: cover;
-            background-position: center center;
-        }
-
-        /* #sass {
-            overflow: hidden;
-            font: 5vw/100vh "微软雅黑";
-            text-align: center;
-            color: transparent;
-            backface-visibility: hidden;
-        }
-
-        span {
-            display: inline-block;
-            text-shadow: 0 0 0 whitesmoke;
-            animation: smoky 5s 1s both;
-        }
-
-        span:nth-child(even) {
-            animation-name: smoky-mirror;
-        }
-
-        @keyframes smoky {
-            60% {
-                text-shadow: 0 0 40px whitesmoke;
-            }
-
-            to {
-                transform:
-                    translate3d(15rem, -8rem, 0) rotate(-40deg) skewX(70deg) scale(1.5);
-                text-shadow: 0 0 20px whitesmoke;
-                opacity: 0;
-            }
-        }
-
-        @keyframes smoky-mirror {
-            60% {
-                text-shadow: 0 0 40px whitesmoke;
-            }
-
-            to {
-                transform:
-                    translate3d(18rem, -8rem, 0) rotate(-40deg) skewX(-70deg) scale(2);
-                text-shadow: 0 0 20px whitesmoke;
-                opacity: 0;
-            }
-        } */
-    </style>
+    <!-- <link rel="stylesheet" media="(min-width: 800px)" href="pc.css" /> -->
+    <link rel="stylesheet" href="pc.css" />
 </head>
 
 <body>
-    <!-- <section id='sass' class="g-img1">
-        <span>C</span><span>S</span><span>S</span><span>&nbsp;</span><span>S</span><span>m</span><span>o</span><span>k</span><span>y</span><span>&nbsp;</span><span>T</span><span>e</span><span>x</span><span>t</span><span>&nbsp;</span><span>E</span><span>f</span><span>f</span><span>e</span><span>c</span><span>t</span>
-    </section> -->
+    <div class="menu closed">
+            <div class="messages button"></div>
+            <div class="music button"></div>
+            <div class="home button"></div>
+            <div class="places button"></div>
+            <div class="bookmark button"></div>
+            <div class="main button">Menu</div>
+    </div>
     <section class="g-word"><span>Header</span></section>
-    <section class="g-img"><span>IMG1</span></section>
+    <section class="g-img1"><span>IMG1</span></section>
     <section class="g-word"><span>Content1</span></section>
-    <section class="g-img"><span>IMG2</span></section>
+    <section class="g-img2"><span>IMG2</span></section>
     <section class="g-word"><span>Content2</span></section>
-    <section class="g-img"><span>IMG3</span></section>
+    <section class="g-img3"><span>IMG3</span></section>
     <section class="g-word"><span>Footer</span></section>
 </body>
-
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(".menu").mousedown(function(){
+	$(this).toggleClass("closed");
+	
+	if($(this).hasClass("closed")) {
+		$(".main.button").text("Menu");
+	} else {
+		$(".main.button").text("Close");
+	}
+})
+</script>
 </html>

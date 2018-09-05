@@ -1,0 +1,234 @@
+        @font-face {
+        font-family: 'Permanent Marker';
+        font-style: normal;
+        font-weight: 400;
+        src: local('Permanent Marker Regular'), local('PermanentMarker-Regular'), url(https://fonts.gstatic.com/s/permanentmarker/v7/Fh4uPib9Iyv2ucM6pGQMWimMp004La2Cfw.woff2) format('woff2');
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+        body {
+            scroll-snap-type: y mandatory;
+            background-color: #b03;
+            margin: 0;
+        }
+
+        section {
+            /* font-family: "Permanent Marker", serif; */
+            height: 100vh;
+            width: 100vw;
+            background: rgba(0, 0, 0, .5);
+            color: #fff;
+            line-height: 100vh;
+            text-align: center;
+            font-size: 20vw;
+            scroll-snap-align: center;
+        }
+
+        .g-word {
+            /* background-image: url($img1); */
+            background: radial-gradient(circle closest-side at 60% 43%, #b03 26%, rgba(187, 0, 51, 0) 27%),
+                radial-gradient(circle closest-side at 40% 43%, #b03 26%, rgba(187, 0, 51, 0) 27%),
+                radial-gradient(circle closest-side at 40% 22%, #d35 45%, rgba(221, 51, 85, 0) 46%),
+                radial-gradient(circle closest-side at 60% 22%, #d35 45%, rgba(221, 51, 85, 0) 46%),
+                radial-gradient(circle closest-side at 50% 35%, #d35 30%, rgba(221, 51, 85, 0) 31%),
+
+                radial-gradient(circle closest-side at 60% 43%, #b03 26%, rgba(187, 0, 51, 0) 27%) 50px 50px,
+                radial-gradient(circle closest-side at 40% 43%, #b03 26%, rgba(187, 0, 51, 0) 27%) 50px 50px,
+                radial-gradient(circle closest-side at 40% 22%, #d35 45%, rgba(221, 51, 85, 0) 46%) 50px 50px,
+                radial-gradient(circle closest-side at 60% 22%, #d35 45%, rgba(221, 51, 85, 0) 46%) 50px 50px,
+                radial-gradient(circle closest-side at 50% 35%, #d35 30%, rgba(221, 51, 85, 0) 31%) 50px 50px;
+            background-color: #b03;
+            background-size: 100px 100px;
+            background-attachment: fixed;
+            /* background-size: cover; */
+            background-position: center center;
+        }
+
+        .g-img1 {
+            background-image: url(nema.webp);
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center center;
+        }
+
+        .g-img2 {
+            background-image: url(lashi.webp);
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center center;
+        }
+        .g-img3 {
+            background-image: url(gezi.webp);
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center center;
+        }
+        section span:hover{
+            color: #ff7300;
+            text-decoration-line: none;
+            text-decoration-style: solid;
+            text-decoration-color: currentcolor;
+            outline: 0;
+            /* color: #cc7a00; */
+            text-shadow: 3px 3px 3px #ffd147;
+        }
+        * {
+
+        transition: all .3s;
+
+        }
+        
+        /* .g-img2 {
+        font: 15vw/1 Permanent Marker;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        text-align: center;
+        background: #111;
+        color: snow;
+        } */
+
+        .g-img2 span {
+        animation: glow 2s ease-in-out both infinite;
+        }
+        span:nth-child(1) {
+        animation-delay: -0.2857142857s;
+        }
+        span:nth-child(2) {
+        animation-delay: -0.5714285714s;
+        }
+        span:nth-child(3) {
+        animation-delay: -0.8571428571s;
+        }
+        span:nth-child(4) {
+        animation-delay: -1.1428571429s;
+        }
+        span:nth-child(5) {
+        animation-delay: -1.4285714286s;
+        }
+        span:nth-child(6) {
+        animation-delay: -1.7142857143s;
+        }
+        span:nth-child(7) {
+        animation-delay: -2s;
+        }
+
+        @keyframes glow {
+        0%, 100% {
+            text-shadow: 0 0 8.3333333333px snow, 0 -25px 50px tomato, -25px 25px 50px yellow, 25px 25px 50px tomato;
+        }
+        33% {
+            text-shadow: 0 0 8.3333333333px snow, 0 -25px 50px cyan, -25px 25px 50px tomato, 25px 25px 50px cyan;
+        }
+        66% {
+            text-shadow: 0 0 8.3333333333px snow, 0 -25px 50px yellow, -25px 25px 50px cyan, 25px 25px 50px yellow;
+        }
+        }
+        @import 'https://fonts.googleapis.com/css?family=Alegreya+Sans:400,500';
+            /* html {
+            background: #f8f7f2;
+            } */
+
+            .menu, .button {
+            width: 10vh;
+            height: 10vh;
+            user-select: none;
+            }
+
+            .menu {
+            position: fixed;
+            top: 5vh;
+            left: 5vh;
+            transition: transform 1.125s cubic-bezier(0.39, 1.52, 0.46, 0.92);
+            transform: scale3d(1, 1, 1);
+            transform-origin: top left;
+            cursor: pointer;
+            }
+
+            .button {
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-radius: 50%;
+            mix-blend-mode: multiply;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: 33%;
+            font: 2.5vh/10vh Alegreya Sans, sans-serif;
+            transition: transform 0.75s cubic-bezier(0.39, 1.52, 0.46, 0.92);
+            will-change: transform;
+            }
+            .button.closed {
+            transform: translate3d(0, 0, 0) !important;
+            }
+
+            .main {
+            /* color: #030f01; */
+            color: #f8f7f2;
+            text-align: center;
+            mix-blend-mode: normal;
+            /* line-height: 100px; */
+            line-height: 10vh;
+            box-shadow: 0 0 0 0.5vh rgba(3, 15, 1, 0.1);
+            transition: border-color 0.75s, color 0.75s;
+            will-change: color, border-color, background;
+            }
+            .closed .main {
+            color: #f8f7f2;
+            box-shadow: 0 0 0 .5vh rgba(3, 15, 1, 0);
+            }
+
+            .home {
+            background-color: #1ba5cd;
+            top: 0%;
+            left: 225%;
+            background-image: url(https://bennettfeely.com/cdpn/home.svg);
+            transition-duration: 0.525s;
+            }
+            .closed .home {
+            transform: translate3d(-225%, -10%, 0) rotate(-180deg);
+            }
+
+            .music {
+            background-color: #1ab254;
+            top: 86.103675%;
+            left: 207.873%;
+            background-image: url(https://bennettfeely.com/cdpn/music.svg);
+            transition-duration: 0.675s;
+            }
+            .closed .music {
+            transform: translate3d(-198.36244%, -89.193835%, 0) rotate(-180deg);
+            }
+
+            .messages {
+            background-color: #fec72e;
+            top: 159.099075%;
+            left: 159.099075%;
+            background-image: url(https://bennettfeely.com/cdpn/messages.svg);
+            transition-duration: 0.825s;
+            }
+            .closed .messages {
+            transform: translate3d(-153.221215%, -151.008915%, 0) rotate(-180deg);
+            }
+
+            .places {
+            background-color: #fa7d39;
+            top: 207.873%;
+            left: 86.103675%;
+            background-image: url(https://bennettfeely.com/cdpn/places.svg);
+            transition-duration: 0.975s;
+            }
+            .closed .places {
+            transform: translate3d(-91.981535%, -199.78284%, 0) rotate(-180deg);
+            }
+
+            .bookmark {
+            background-color: #ee5656;
+            top: 225%;
+            left: 0%;
+            background-image: url(https://bennettfeely.com/cdpn/bookmark.svg);
+            transition-duration: 1.125s;
+            }
+            .closed .bookmark {
+            transform: translate3d(-9.51056%, -228.09016%, 0) rotate(-180deg);
+            }
