@@ -1,3 +1,12 @@
+        @font-face {
+            font-family: 'Permanent Marker';
+            font-style: normal;
+            font-weight: 400;
+            /* src: local('Permanent Marker Regular'), local('PermanentMarker-Regular'), url(https://fonts.gstatic.com/s/permanentmarker/v7/Fh4uPib9Iyv2ucM6pGQMWimMp004La2Cfw.woff2) format('woff2'); */
+            src: url(ziti.woff2);
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+
         body {
             scroll-snap-type: y mandatory;
             background-color: #b03;
@@ -5,7 +14,7 @@
         }
 
         section {
-            font: 100 150px/1 Alegreya Sans;
+            font-family:Alegreya Sans;
             /* font-style: normal;
             font-weight: 400; */
             height: 100vh;
@@ -59,7 +68,7 @@
             background-position: center center;
         }
 
-        section span:hover {
+        section span {
             color: #ffd147;
             text-decoration-line: none;
             text-decoration-style: solid;
@@ -68,9 +77,73 @@
             /* color: #cc7a00; */
             text-shadow: 5px 5px 5px #ff7300;
         }
-        header {
-            display: none;
+
+        * {
+            transition: all .3s;
         }
+
+        header {
+        font: 3vh/1 Permanent Marker;
+        display: flex;
+        /* font-size: 10px; */
+        position: fixed;
+        top: 0;
+        align-items: center;
+        justify-content: center;
+        height: 15vh;
+        width: 100%;
+        text-align: center;
+        background: #111;
+        color: snow;
+        }
+        header{
+            animation: glow 2s ease-in-out both infinite;
+        }
+
+        span:nth-child(1) {
+            animation-delay: -0.2857142857s;
+        }
+
+        span:nth-child(2) {
+            animation-delay: -0.5714285714s;
+        }
+
+        span:nth-child(3) {
+            animation-delay: -0.8571428571s;
+        }
+
+        span:nth-child(4) {
+            animation-delay: -1.1428571429s;
+        }
+
+        span:nth-child(5) {
+            animation-delay: -1.4285714286s;
+        }
+
+        span:nth-child(6) {
+            animation-delay: -1.7142857143s;
+        }
+
+        span:nth-child(7) {
+            animation-delay: -2s;
+        }
+
+        @keyframes glow {
+
+            0%,
+            100% {
+                text-shadow: 0 0 8.3333333333px snow, 0 -25px 50px tomato, -25px 25px 50px yellow, 25px 25px 50px tomato;
+            }
+
+            33% {
+                text-shadow: 0 0 8.3333333333px snow, 0 -25px 50px cyan, -25px 25px 50px tomato, 25px 25px 50px cyan;
+            }
+
+            66% {
+                text-shadow: 0 0 8.3333333333px snow, 0 -25px 50px yellow, -25px 25px 50px cyan, 25px 25px 50px yellow;
+            }
+        }
+
         @import 'https://fonts.googleapis.com/css?family=Alegreya+Sans:400,500';
 
         /* html {
@@ -85,12 +158,13 @@
 
         .menu {
             position: fixed;
-            top: 5vh;
-            left: 5vh;
+            top: 2vh;
+            left: 2vh;
             transition: transform 1.125s cubic-bezier(0.39, 1.52, 0.46, 0.92);
             transform: scale3d(1, 1, 1);
             transform-origin: top left;
             cursor: pointer;
+            z-index: 999;
         }
 
         .button {
@@ -196,9 +270,9 @@
             background: papayawhip;
         }
 
-        span,h1 {
+        h1 {
             text-shadow: 1px 1px shade(olivedrab, 25%), 2px 2px shade(olivedrab, 25%), 3px 3px shade(olivedrab, 25%), 4px 4px shade(olivedrab, 25%), 5px 5px shade(olivedrab, 25%), 6px 6px shade(olivedrab, 25%), 7px 7px shade(olivedrab, 25%), 8px 8px shade(olivedrab, 25%), 9px 9px shade(olivedrab, 25%), 10px 10px shade(olivedrab, 25%), 11px 11px shade(olivedrab, 25%), 12px 12px shade(olivedrab, 25%), 13px 13px shade(olivedrab, 25%), 14px 14px shade(olivedrab, 25%), 15px 15px shade(olivedrab, 25%), -1px 1px olivedrab, -2px 2px olivedrab, -3px 3px olivedrab, -4px 4px olivedrab, -5px 5px olivedrab, -6px 6px olivedrab, -7px 7px olivedrab, -8px 8px olivedrab, -9px 9px olivedrab, -10px 10px olivedrab, -11px 11px olivedrab, -12px 12px olivedrab, -13px 13px olivedrab, -14px 14px olivedrab, -15px 15px olivedrab, -1px -1px tint(olivedrab, 25%), -2px -2px tint(olivedrab, 25%), -3px -3px tint(olivedrab, 25%), -4px -4px tint(olivedrab, 25%), -5px -5px tint(olivedrab, 25%), -6px -6px tint(olivedrab, 25%), -7px -7px tint(olivedrab, 25%), -8px -8px tint(olivedrab, 25%), -9px -9px tint(olivedrab, 25%), -10px -10px tint(olivedrab, 25%), -11px -11px tint(olivedrab, 25%), -12px -12px tint(olivedrab, 25%), -13px -13px tint(olivedrab, 25%), -14px -14px tint(olivedrab, 25%), -15px -15px tint(olivedrab, 25%), 1px -1px olivedrab, 2px -2px olivedrab, 3px -3px olivedrab, 4px -4px olivedrab, 5px -5px olivedrab, 6px -6px olivedrab, 7px -7px olivedrab, 8px -8px olivedrab, 9px -9px olivedrab, 10px -10px olivedrab, 11px -11px olivedrab, 12px -12px olivedrab, 13px -13px olivedrab, 14px -14px olivedrab, 15px -15px olivedrab, 0 -1px shade(olivedrab, 50%), 0 -2px shade(olivedrab, 50%), 0 -3px shade(olivedrab, 50%), 0 -4px shade(olivedrab, 50%), 0 -5px shade(olivedrab, 50%), 0 -6px shade(olivedrab, 50%), 0 -7px shade(olivedrab, 50%), 0 -8px shade(olivedrab, 50%), 0 -9px shade(olivedrab, 50%), 0 -10px shade(olivedrab, 50%), 0 -11px shade(olivedrab, 50%), 0 -12px shade(olivedrab, 50%), 0 -13px shade(olivedrab, 50%), 0 -14px shade(olivedrab, 50%), 0 -15px shade(olivedrab, 50%), 0 1px shade(olivedrab, 50%), 0 2px shade(olivedrab, 50%), 0 3px shade(olivedrab, 50%), 0 4px shade(olivedrab, 50%), 0 5px shade(olivedrab, 50%), 0 6px shade(olivedrab, 50%), 0 7px shade(olivedrab, 50%), 0 8px shade(olivedrab, 50%), 0 9px shade(olivedrab, 50%), 0 10px shade(olivedrab, 50%), 0 11px shade(olivedrab, 50%), 0 12px shade(olivedrab, 50%), 0 13px shade(olivedrab, 50%), 0 14px shade(olivedrab, 50%), 0 15px shade(olivedrab, 50%), -1px 0 tint(olivedrab, 25%), -2px 0 tint(olivedrab, 25%), -3px 0 tint(olivedrab, 25%), -4px 0 tint(olivedrab, 25%), -5px 0 tint(olivedrab, 25%), -6px 0 tint(olivedrab, 25%), -7px 0 tint(olivedrab, 25%), -8px 0 tint(olivedrab, 25%), -9px 0 tint(olivedrab, 25%), -10px 0 tint(olivedrab, 25%), -11px 0 tint(olivedrab, 25%), -12px 0 tint(olivedrab, 25%), -13px 0 tint(olivedrab, 25%), -14px 0 tint(olivedrab, 25%), -15px 0 tint(olivedrab, 25%), 1px 0 shade(olivedrab, 50%), 2px 0 shade(olivedrab, 50%), 3px 0 shade(olivedrab, 50%), 4px 0 shade(olivedrab, 50%), 5px 0 shade(olivedrab, 50%), 6px 0 shade(olivedrab, 50%), 7px 0 shade(olivedrab, 50%), 8px 0 shade(olivedrab, 50%), 9px 0 shade(olivedrab, 50%), 10px 0 shade(olivedrab, 50%), 11px 0 shade(olivedrab, 50%), 12px 0 shade(olivedrab, 50%), 13px 0 shade(olivedrab, 50%), 14px 0 shade(olivedrab, 50%), 15px 0 shade(olivedrab, 50%);
-            font: 100 150px/1 Alegreya Sans;
+            font: 100 6vh/1 Alegreya Sans;
             letter-spacing: 20px;
             text-align: center;
             color: goldenrod;
