@@ -3,7 +3,9 @@
             background-color: #b03;
             margin: 0;padding: 0;
         }
-
+        nav{
+            display: none;
+        }
         section {
             font: 100 150px/1 Alegreya Sans;
             /* font-style: normal;

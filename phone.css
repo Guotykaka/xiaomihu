@@ -159,3 +159,67 @@
             text-align: center;
             color: goldenrod;
         }
+        /* nav */
+        /* @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500); */
+        /* body {
+        font: 100% Roboto;
+        background: #303f9f;
+        margin: 50px;
+        } */
+
+        nav {
+            position: fixed;top: 3vh;left: 0;
+            width: 100%;
+            background: #111; 
+            color:  snow;
+            -webkit-clip-path:inset(0 200px 200px 0);
+            clip-path:inset(0 82vw 250px 0);
+            transition: -webkit-clip-path 0.5625s, clip-path 0.375s;
+        }
+        nav:hover {
+        transition-timing-function: ease-out;
+        transition-duration: 0.35s;
+        -webkit-clip-path:inset(0 0 0 0);
+        clip-path:inset(0 0 0 0);
+        }
+
+        a {
+        display: block;
+        line-height: 50px;
+        padding: 0 20px;
+        color: inherit;
+        cursor: pointer;
+        user-select: none;
+        }
+        a:hover {
+        background: #ffe082;
+        }
+        a:active {
+        background: #ffca28;
+        }
+
+        .navicon {
+        padding: 23px 20px;
+        cursor: pointer;
+        transform-origin: 32px 24px;
+        }
+        .navicon div {
+        position: relative;
+        width: 20px;
+        height: 2px;
+        background: snow;
+        }
+        .navicon div:before, .navicon div:after {
+        display: block;
+        content: "";
+        width: 20px;
+        height: 2px;
+        background: snow;
+        position: absolute;
+        }
+        .navicon div:before {
+        top: -7px;
+        }
+        .navicon div:after {
+        top: 7px;
+        }
