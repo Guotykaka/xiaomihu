@@ -18,8 +18,6 @@
             font-size: 20vw;
             scroll-snap-align: center;
             margin: 0;
-
-            
         }
 
         section {
@@ -41,10 +39,10 @@
         }
 
         .g-img1 {
-            background-image: url(nema.webp);
+            /* background-image: url(nema.webp);
             background-attachment: fixed;
             background-size: cover;
-            background-position: center center;
+            background-position: center center; */
         }
 
         .g-img2 {
@@ -55,7 +53,7 @@
         }
 
         .g-img3 {
-            background-image: url(gezi.webp);
+            background-image: url(nema.webp);
             background-attachment: fixed;
             background-size: cover;
             background-position: center center;
@@ -205,3 +203,140 @@
             text-align: center;
             color: goldenrod;
         }
+
+          .g-img1 {
+            /* height: 100%; */
+            text-align: center;
+            display: flex;
+            user-select: none;
+            /* background: black; */
+            backface-visibility: hidden;
+          }
+          
+          figure {
+            padding: 0;
+            margin: 0;
+            flex: 1;
+            background-color: transparent;
+            background-image: url(cover.webp);
+            background-size: cover;
+            background-repeat: no-repeat;
+          }
+          figure:nth-child(1) {
+            background-position: 6.25%;
+          }
+          figure:nth-child(2) {
+            background-position: 12.5%;
+          }
+          figure:nth-child(3) {
+            background-position: 18.75%;
+          }
+          figure:nth-child(4) {
+            background-position: 25%;
+          }
+          figure:nth-child(5) {
+            background-position: 31.25%;
+          }
+          figure:nth-child(6) {
+            background-position: 37.5%;
+          }
+          figure:nth-child(7) {
+            background-position: 43.75%;
+          }
+          figure:nth-child(8) {
+            background-position: 50%;
+          }
+          figure:nth-child(9) {
+            background-position: 56.25%;
+          }
+          figure:nth-child(10) {
+            background-position: 62.5%;
+          }
+          figure:nth-child(11) {
+            background-position: 68.75%;
+          }
+          figure:nth-child(12) {
+            background-position: 75%;
+          }
+          figure:nth-child(13) {
+            background-position: 81.25%;
+          }
+          figure:nth-child(14) {
+            background-position: 87.5%;
+          }
+          figure:nth-child(15) {
+            background-position: 93.75%;
+          }
+          figure:nth-child(16) {
+            background-position: 100%;
+          }
+          figure:before {
+            display: block;
+            color: black;
+          }
+          .multiply {
+            background-blend-mode: multiply;
+          }
+          
+          .screen {
+            background-blend-mode: screen;
+          }
+          
+          .overlay {
+            background-blend-mode: overlay;
+          }
+          
+          .darken {
+            background-blend-mode: darken;
+          }
+          
+          .lighten {
+            background-blend-mode: lighten;
+          }
+          
+          .color-dodge {
+            background-blend-mode: color-dodge;
+          }
+          
+          .color-burn {
+            background-blend-mode: color-burn;
+          }
+          
+          .hard-light {
+            background-blend-mode: hard-light;
+          }
+          
+          .soft-light {
+            background-blend-mode: soft-light;
+          }
+          
+          .difference {
+            background-blend-mode: difference;
+          }
+          
+          .exclusion {
+            background-blend-mode: exclusion;
+          }
+          
+          .hue {
+            background-blend-mode: hue;
+          }
+          
+          .saturation {
+            background-blend-mode: saturation;
+          }
+          
+          .color {
+            background-blend-mode: color;
+          }
+          
+          .luminosity {
+            background-blend-mode: luminosity;
+          }
+          
+          .viewing {
+            cursor: zoom-out;
+          }
+          .viewing figure:not(.normal):not(.maximized) {
+            display: none;
+          }

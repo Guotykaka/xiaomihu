@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    html, body {
+  height: 100%;
+}
+
+div {
+  height: 100vh;
+  text-align: center;
+  display: flex;
+  user-select: none;
+  background: black;
+  backface-visibility: hidden;
+}
+
+figure {
+  padding: 0;
+  margin: 0;
+  flex: 1;
+  background-color: transparent;
+  background-image: url(http://upload.wikimedia.org/wikipedia/commons/2/2c/Iguazu_D%C3%A9cembre_2007_-_Panorama_7.jpg);
+  background-repeat: no-repeat;
+}
+figure:nth-child(1) {
+  background-position: 6.25%;
+}
+figure:nth-child(2) {
+  background-position: 12.5%;
+}
+figure:nth-child(3) {
+  background-position: 18.75%;
+}
+figure:nth-child(4) {
+  background-position: 25%;
+}
+figure:nth-child(5) {
+  background-position: 31.25%;
+}
+figure:nth-child(6) {
+  background-position: 37.5%;
+}
+figure:nth-child(7) {
+  background-position: 43.75%;
+}
+figure:nth-child(8) {
+  background-position: 50%;
+}
+figure:nth-child(9) {
+  background-position: 56.25%;
+}
+figure:nth-child(10) {
+  background-position: 62.5%;
+}
+figure:nth-child(11) {
+  background-position: 68.75%;
+}
+figure:nth-child(12) {
+  background-position: 75%;
+}
+figure:nth-child(13) {
+  background-position: 81.25%;
+}
+figure:nth-child(14) {
+  background-position: 87.5%;
+}
+figure:nth-child(15) {
+  background-position: 93.75%;
+}
+figure:nth-child(16) {
+  background-position: 100%;
+}
+figure:before {
+  display: block;
+  color: black;
+}
+.multiply {
+  background-blend-mode: multiply;
+}
+
+.screen {
+  background-blend-mode: screen;
+}
+
+.overlay {
+  background-blend-mode: overlay;
+}
+
+.darken {
+  background-blend-mode: darken;
+}
+
+.lighten {
+  background-blend-mode: lighten;
+}
+
+.color-dodge {
+  background-blend-mode: color-dodge;
+}
+
+.color-burn {
+  background-blend-mode: color-burn;
+}
+
+.hard-light {
+  background-blend-mode: hard-light;
+}
+
+.soft-light {
+  background-blend-mode: soft-light;
+}
+
+.difference {
+  background-blend-mode: difference;
+}
+
+.exclusion {
+  background-blend-mode: exclusion;
+}
+
+.hue {
+  background-blend-mode: hue;
+}
+
+.saturation {
+  background-blend-mode: saturation;
+}
+
+.color {
+  background-blend-mode: color;
+}
+
+.luminosity {
+  background-blend-mode: luminosity;
+}
+
+.viewing {
+  cursor: zoom-out;
+}
+.viewing figure:not(.normal):not(.maximized) {
+  display: none;
+}
+  </style>
+</head>
+<style class="swatch" id="background_color"></style>
+<body>
+  <div>
+      <figure class="normal"></figure>
+      <figure class="multiply"></figure>
+      <figure class="screen"></figure>
+      <figure class="overlay"></figure>
+      <figure class="darken"></figure>
+      <figure class="lighten"></figure>
+      <figure class="color-dodge"></figure>
+      <figure class="color-burn"></figure>
+      <figure class="hard-light"></figure>
+      <figure class="soft-light"></figure>
+      <figure class="difference"></figure>
+      <figure class="exclusion"></figure>
+      <figure class="hue"></figure>
+      <figure class="saturation"></figure>
+      <figure class="color"></figure>
+      <figure class="luminosity"></figure>
+      
+  </div>
+  
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script>
+  // Change y-axis control to "lightness" or "saturation"
+  y_axis = "saturation"
+width = $(window).width();
+height = $(window).height();
+
+$(window).resize(function(){
+  width = $(window).width();
+  height = $(window).height();  
+});
+
+var $bg = $("#background_color");
+
+
+$(window).mousemove(function(e){
+  var x = e.pageX;
+  var y = e.pageY;
+  
+  var hue = Math.round((x/width)*256);
+  var saturation = 100 - Math.round((y/height)*100);
+  var lightness = 100 - Math.round((y/height)*100);
+  
+  if(y_axis == "saturation") {
+    var hsl = 'hsl(' + hue + ',' + saturation + '%,50%)';
+  } else {
+    var hsl = 'hsl(' + hue + ',50%,' + lightness + '%)';
+  }
+
+  
+  var style = 'figure { background-color: ' + hsl + '; color: ' + hsl + '; } ';
+  
+  $bg.text(style);
+});
+</script>
+</body>
+</html>
