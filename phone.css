@@ -25,7 +25,6 @@
             font-size: 20vw;
             scroll-snap-align: center;
             margin: 0;
-
             
         }
 
@@ -48,10 +47,11 @@
         }
 
         .g-img1 {
-            background-image: url(nema.webp);
+            display: none;
+            /* background-image: url(nema.webp);
             background-attachment: fixed;
             background-size: cover;
-            background-position: center center;
+            background-position: center center; */
         }
 
         .g-img2 {
@@ -62,7 +62,7 @@
         }
 
         .g-img3 {
-            background-image: url(gezi.webp);
+            background-image: url(nema.webp);
             background-attachment: fixed;
             background-size: cover;
             background-position: center center;
@@ -224,7 +224,7 @@
         top: 7px;
         }
         
-        .g-img1 {
+        .g-imgP {
             /* height: 100%; */
             text-align: center;
             display: flex;
