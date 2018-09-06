@@ -38,7 +38,8 @@
             background-position: center center;
         }
 
-        .g-img1 {
+        .g-imgP {
+            display: none;
             /* background-image: url(nema.webp);
             background-attachment: fixed;
             background-size: cover;
