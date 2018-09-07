@@ -55,14 +55,14 @@
         }
 
         .g-img2 {
-            background-image: url(lashi.webp);
+            background-image: url(z1.jpg);
             background-attachment: fixed;
             background-size: cover;
             background-position: center center;
         }
 
         .g-img3 {
-            background-image: url(nema.webp);
+            background-image: url(z2.jpg);
             background-attachment: fixed;
             background-size: cover;
             background-position: center center;
@@ -238,57 +238,58 @@
             margin: 0;
             flex: 1;
             background-color: transparent;
-            background-image: url(cover.webp);
+            background-image: url(zhang.jpg);
             background-size: cover;
             background-repeat: no-repeat;
+            background-position: center center
           }
           figure:nth-child(1) {
-            background-position: 6.25%;
+            background-position: 3.75%;
           }
           figure:nth-child(2) {
-            background-position: 12.5%;
+            background-position: 7.5%;
           }
           figure:nth-child(3) {
-            background-position: 18.75%;
+            background-position: 11.5%;
           }
           figure:nth-child(4) {
-            background-position: 25%;
+            background-position: 15%;
           }
           figure:nth-child(5) {
-            background-position: 31.25%;
+            background-position: 18.75%;
           }
           figure:nth-child(6) {
-            background-position: 37.5%;
+            background-position: 26.25%;
           }
           figure:nth-child(7) {
-            background-position: 43.75%;
+            background-position: 30%;
           }
           figure:nth-child(8) {
-            background-position: 50%;
+            background-position: 33.75%;
           }
           figure:nth-child(9) {
-            background-position: 56.25%;
+            background-position: 37.5%;
           }
           figure:nth-child(10) {
-            background-position: 62.5%;
+            background-position: 41.25%;
           }
           figure:nth-child(11) {
-            background-position: 68.75%;
+            background-position: 45%;
           }
           figure:nth-child(12) {
-            background-position: 75%;
+            background-position: 48.75%;
           }
           figure:nth-child(13) {
-            background-position: 81.25%;
+            background-position: 52.5%;
           }
           figure:nth-child(14) {
-            background-position: 87.5%;
+            background-position: 56.25%;
           }
           figure:nth-child(15) {
-            background-position: 93.75%;
+            background-position: 60%;
           }
           figure:nth-child(16) {
-            background-position: 100%;
+            background-position: 63.75%;
           }
           figure:before {
             display: block;
