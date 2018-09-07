@@ -46,7 +46,7 @@
             background-position: center center;
         }
 
-        .g-img1 {
+        .g-imgP {
             display: none;
             /* background-image: url(nema.webp);
             background-attachment: fixed;
@@ -224,7 +224,7 @@
         top: 7px;
         }
         
-        .g-imgP {
+        .g-img1 {
             /* height: 100%; */
             text-align: center;
             display: flex;
