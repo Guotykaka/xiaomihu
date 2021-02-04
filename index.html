@@ -45,22 +45,23 @@
             <span>You Are My Lord</span>
     </header>
     <section class="g-img1">
-            <figure class="normal"></figure>
-            <figure class="multiply"></figure>
-            <figure class="screen"></figure>
-            <figure class="overlay"></figure>
-            <figure class="darken"></figure>
-            <figure class="lighten"></figure>
-            <figure class="color-dodge"></figure>
-            <figure class="color-burn"></figure>
-            <figure class="hard-light"></figure>
-            <figure class="soft-light"></figure>
-            <figure class="difference"></figure>
-            <figure class="exclusion"></figure>
-            <figure class="hue"></figure>
-            <figure class="saturation"></figure>
-            <figure class="color"></figure>
-            <figure class="luminosity"></figure>
+            <figure class="normalphone"></figure>
+            <figure class="normal phone"></figure>
+            <figure class="multiply phone"></figure>
+            <figure class="screen phone"></figure>
+            <figure class="overlay phone"></figure>
+            <figure class="darken phone"></figure>
+            <figure class="lighten phone"></figure>
+            <figure class="color-dodge phone"></figure>
+            <figure class="color-burn phone"></figure>
+            <figure class="hard-light phone"></figure>
+            <figure class="soft-light phone"></figure>
+            <figure class="difference phone"></figure>
+            <figure class="exclusion phone"></figure>
+            <figure class="hue phone"></figure>
+            <figure class="saturation phone"></figure>
+            <figure class="color phone"></figure>
+            <figure class="luminosity phone"></figure>
         <!-- <span>IMG1</span> -->
             <style class="swatch" id="background_color"></style>
     </section>
@@ -127,13 +128,13 @@ $(window).mousemove(function(e){
   var y = e.pageY;
   
   var hue = Math.round((x/width)*256);
-  var saturation = 200 - Math.round((y/height)*100);
+  var saturation = 300 - Math.round((y/height)*100);
   var lightness = 100 - Math.round((y/height)*100);
   
   if(y_axis == "saturation") {
-    var hsl = 'hsl(' + hue + ',' + saturation + '%,50%)';
+    var hsl = 'hsl(' + hue + ',' + saturation + '%,30%)';
   } else {
-    var hsl = 'hsl(' + hue + ',50%,' + lightness + '%)';
+    var hsl = 'hsl(' + hue + ',30%,' + lightness + '%)';
   }
 
   

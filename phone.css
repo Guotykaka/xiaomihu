@@ -244,22 +244,22 @@
             background-position: center center
           }
           figure:nth-child(1) {
-            background-position: 3.75%;
+            /* background-position: 0%; */
           }
           figure:nth-child(2) {
-            background-position: 7.5%;
+            background-position: 20%;
           }
           figure:nth-child(3) {
-            background-position: 11.5%;
+            background-position: 40%;
           }
           figure:nth-child(4) {
-            background-position: 15%;
+            background-position: 60%;
           }
           figure:nth-child(5) {
-            background-position: 18.75%;
+            background-position: 80%;
           }
           figure:nth-child(6) {
-            background-position: 26.25%;
+            background-position: 100%;
           }
           figure:nth-child(7) {
             background-position: 30%;
@@ -304,7 +304,7 @@
           }
           
           .overlay {
-            background-blend-mode: overlay;
+            background-blend-mode: hard-light;
           }
           
           .darken {
@@ -312,7 +312,7 @@
           }
           
           .lighten {
-            background-blend-mode: lighten;
+            background-blend-mode: color-dodge;
           }
           
           .color-dodge {
@@ -361,7 +361,9 @@
           .viewing figure:not(.normal):not(.maximized) {
             display: none;
           }
-
+          .phone{
+            display: none;
+          }
 
 
 

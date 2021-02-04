@@ -221,7 +221,6 @@
             background-color: transparent;
             background-image: url(bg3.jpg);
             background-size: cover;
-            background-repeat: no-repeat;
           }
           figure:nth-child(1) {
             background-position: 6.25%;
@@ -274,6 +273,9 @@
           figure:before {
             display: block;
             color: black;
+          }
+          .normalphone{
+            display: none;
           }
           .multiply {
             background-blend-mode: multiply;
