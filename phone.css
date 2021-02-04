@@ -55,14 +55,14 @@
         }
 
         .g-img2 {
-            background-image: url(z1.jpg);
+            background-image: url(girl1.jpg);
             background-attachment: fixed;
             background-size: cover;
             background-position: center center;
         }
 
         .g-img3 {
-            background-image: url(z2.jpg);
+            background-image: url(girl2.jpg);
             background-attachment: fixed;
             background-size: cover;
             background-position: center center;
@@ -238,7 +238,7 @@
             margin: 0;
             flex: 1;
             background-color: transparent;
-            background-image: url(zhang.jpg);
+            background-image: url(girl3.jpg);
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center center

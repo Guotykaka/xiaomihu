@@ -47,14 +47,14 @@
         }
 
         .g-img2 {
-            background-image: url(lashi.webp);
+            background-image: url(bg1.jpg);
             background-attachment: fixed;
             background-size: cover;
             background-position: center center;
         }
 
         .g-img3 {
-            background-image: url(nema.webp);
+            background-image: url(bg2.jpg);
             background-attachment: fixed;
             background-size: cover;
             background-position: center center;
@@ -219,7 +219,7 @@
             margin: 0;
             flex: 1;
             background-color: transparent;
-            background-image: url(cover.webp);
+            background-image: url(bg3.jpg);
             background-size: cover;
             background-repeat: no-repeat;
           }
